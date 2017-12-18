@@ -1,0 +1,11 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+node_modules
+build
+
+# My configurations:
+db.ini
+deploy_key_rsa

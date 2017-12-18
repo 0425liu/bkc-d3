@@ -1,0 +1,29 @@
+{
+  "name": "d3",
+  "version": "1.0.0",
+  "description": "D3.js\r 12",
+  "main": "d3Temlate.js",
+  "scripts": {
+    "build": "babel src -d build ",
+    "babelWatch": "babel src/**/*.js -d build -w -s inline",
+    "releaseBuild": "babel src -d release/lib --no-comments --compact true --minified"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0425liu/bkc-d3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0425liu/bkc-d3/issues"
+  },
+  "homepage": "https://github.com/0425liu/bkc-d3#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
