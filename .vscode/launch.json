@@ -1,35 +1,33 @@
 {
-    // 使用 IntelliSense 了解相关属性。 
-    // 悬停以查看现有属性的描述。
-    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "谷歌浏览器", //运行html文件，用谷歌浏览器打开
             "type": "chrome",
             "request": "launch",
-            "name": "启动程序",
-            "program": "${workspaceRoot}/index.html",
-            "port":5433
-        },
-        {
-            "type": "node",
-            "request": "attach",
-            "name": "附加到端口",
-            "address": "localhost",
-            "port": 5858
-        },
-        {
-            "name": "使用本机 Chrome 调试",
-            "type": "chrome",
-            "request": "launch",
-             "file": "${workspaceRoot}\\index.html",
-        //  "url": "http://mysite.com/index.html", //使用外部服务器时,请注释掉 file, 改用 url, 并将 useBuildInServer 设置为 false "http://mysite.com/index.html
-            "runtimeExecutable": "C:\\Users\\liukang\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe", // 改成您的 Chrome 安装路径
+            "url": "http://localhost:3000/index.html",
             "sourceMaps": true,
-            "webRoot": "${workspaceRoot}",
-        //  "preLaunchTask":"build",
-            "userDataDir":"${tmpdir}",
-            "port":5433
+            "webRoot": "${workspaceRoot}"
+        },
+        {
+            "name": "nodeLauch", //单独调试js，即可以直接运行js
+            "type": "node",
+            "request": "launch",
+            "program": "${file}", //这个配置成你要调试的文件、${file}当前打开的文件
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "console": "internalConsole",
+            "preLaunchTask": "",
+            "sourceMaps": false,
+            "outDir": null
         }
     ]
 }
